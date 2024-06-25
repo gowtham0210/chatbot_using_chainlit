@@ -19,3 +19,7 @@ pip install -r requirements.txt
 ```bash
 chainlit init
 ```
+
+```bash
+chainlit run app.py
+```

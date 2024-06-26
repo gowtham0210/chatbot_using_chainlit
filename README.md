@@ -1,3 +1,9 @@
+## Food Delivery ChatBot
+Zomato ChatBot
+LLM - GPT 3.5 Turbo
+Prompt - user defined Prompt
+
+
 ## How to run ?
 1. Create Virtual Environment
 ```bash

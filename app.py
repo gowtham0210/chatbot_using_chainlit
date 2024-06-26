@@ -1,11 +1,17 @@
 import chainlit as cl
-
+from src.llm import ask_order, messages
+import json
 
 @cl.on_message
 async def main(message: cl.Message):
-    # Your custom logic goes here...
+    user_msg = {"role":"user","content":message.content}
+    messages.append(user_msg)
+    response = ask_order(messages)
+    assitant_msg = {"role":"user","content":response}
+    messages.append(assitant_msg)
 
-    # Send a response back to the user
+    json_res = json.dumps(response)
+
     await cl.Message(
-        content=f"Received: {message.content}",
+        content = response
     ).send()
